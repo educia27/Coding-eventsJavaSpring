@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org/">
-<head>
-    <meta charset="UTF-8"/>
-    <title>Events Listing</title>
-</head>
-<body>
-    <ul>
-        <th:block th:each ="event: ${events}">
-            <li th:text= "${event}"></li>
-        </th:block>
-    </ul>
+<head th:replace="fragments :: head"></head>
+<body class = "container">
+<h1> All Events</h1>
+<nav th:replace="fragments :: navigation"></nav>
+
+<p th:unless = "${events} and ${events.size()}"> No events!</p>
+    <table class ="table table-striped">
+        <thead class = "thead-dark">
+            <tr class = "table-primary">
+                <th>Type of Programming Events Available For Motivated Humans</th>
+            </tr>
+        </thead>
+        <tr th:each ="event: ${events}">
+            <td th:text= "${event.key}"></td>
+            <td th:text= "${event.value}"></td>
+        </tr>
+    </table>
 </body>
 </html>
