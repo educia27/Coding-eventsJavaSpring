@@ -15,7 +15,6 @@ public class EventController {
 
 //    private static List<String> events = new ArrayList<>();
 
-
     @GetMapping
     public String displayAllEvents(Model model) {
         HashMap<String, String> events = new HashMap<>();
