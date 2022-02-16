@@ -9,12 +9,12 @@
     <table class ="table table-striped">
         <thead class = "thead-dark">
             <tr class = "table-primary">
-                <th>Type of Programming Events Available For Motivated Humans</th>
+                <th>Type of Events</th>
             </tr>
         </thead>
         <tr th:each ="event: ${events}">
-            <td th:text= "${event.key}"></td>
-            <td th:text= "${event.value}"></td>
+            <td th:text= "${event.name}"></td>
+<!--            <td th:text= "${event.value}"></td>-->
         </tr>
     </table>
 </body>
