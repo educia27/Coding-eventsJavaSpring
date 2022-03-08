@@ -10,10 +10,10 @@ import java.util.Objects;
 
 
 @Entity
-public class Event {
-    @Id
-    @GeneratedValue
-    private int id;
+public class Event extends AbstractEntity {
+//    @Id
+//    @GeneratedValue
+//    private int id;
 
 //    private static int nextId = 1;
 
@@ -63,9 +63,9 @@ public class Event {
         this.contactEmail = contactEmail;
     }
 
-    public int getId() {
-        return id;
-    }
+//    public int getId() {
+//        return id;
+//    }
 
 
     public EventType getType() {
@@ -81,16 +81,17 @@ public class Event {
         return name;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Event)) return false;
-        Event event = (Event) o;
-        return getId() == event.getId();
-    }
+//    @Override
+//    public boolean equals(Object o) {
+//        if (this == o) return true;
+//        if (!(o instanceof Event)) return false;
+//        Event event = (Event) o;
+//        return getId() == event.getId();
+//    }
+//
+//    @Override
+//    public int hashCode() {
+//        return Objects.hash(getId());
+//    }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(getId());
-    }
 }
